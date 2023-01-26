@@ -1,0 +1,13 @@
+{
+  "name": "explore-saucelabs-testcomposer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "create-job": "node create-job.js"
+  },
+  "dependencies": {
+    "@saucelabs/sauce-json-reporter": "^1.1.0",
+    "@saucelabs/testcomposer": "^1.0.0"
+  }
+}
