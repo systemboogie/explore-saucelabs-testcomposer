@@ -30,12 +30,12 @@ s2.withTest('nay', {
     endTime: new Date().toISOString(),
     browserName: 'Chrome',
     browserVersion: '105',
-    framework: 'webdriver',
+    framework: 'komornik',
     frameworkVersion: '4.8',
     platformName: 'Windows 11',
   });
 
-  const imageData = fs.createReadStream('./0000screenshot.png');
+  const imageData = fs.createReadStream('./screenshot-1.png');
 
   const consoleLogData = new Readable();
   consoleLogData.push('hello!');
@@ -46,7 +46,7 @@ s2.withTest('nay', {
   sauceReport.push(null);
 
   const uploads = await client.uploadAssets(job.id, [
-    { filename: '0000screenshot.png', data: imageData },
+    { filename: 'screenshot-1.png', data: imageData },
     { filename: 'console.log', data: consoleLogData },
     { filename: 'sauce-test-report.json', data: sauceReport },
   ]);
